@@ -8,7 +8,8 @@
 
   /* Neutral */
 
-  --light-grayish-cyan--bg: hsl(180, 52%, 96%);
+  --white: hsl(0, 100%, 98%);
+  --light-grayish-cyan--bg: hsl(180, 61%, 92%);
   --light-grayish-cyan: hsl(180, 31%, 95%);
   --dark-grayish-cyan: hsl(180, 8%, 52%);
   --very-dark-grayish-cyan: hsl(180, 14%, 20%);
@@ -17,4 +18,21 @@
 body {
   font-size: 15px;
   font-family: var(--main-font);
+}
+
+header {
+  background-image: url("/assets/img/bg-header-mobile.svg");
+  background-color: var(--desaturated-dark-cyan);
+  background-position: center;
+  height: 15vh;
+}
+
+body {
+  background-color: var(--light-grayish-cyan--bg);
+}
+
+.card {
+  width: 85vw;
+  margin: 0 auto;
+  background-color: var(--white);
 }
