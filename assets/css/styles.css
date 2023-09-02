@@ -31,13 +31,52 @@ body {
   background-color: var(--light-grayish-cyan--bg);
 }
 
-.card {
+.filter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: -70px
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  font-weight: 700;
+  color: var(--desaturated-dark-cyan);
+  font-family: var(--main-font);
+  align-self: flex-end;
+}
+
+button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+button:active {
+  color: var(--dark-grayish-cyan);
+}
+
+.card, .filter-container {
   width: 75vw;
   margin: 3em auto;
   background-color: var(--light-grayish-cyan);
   padding: 1em 1.5em;
   border-radius: 5px;
   box-shadow: .5px .5px 20px var(--desaturated-dark-cyan);
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+}
+
+select {
+  border: none;
+  background-color: transparent;
+  font-family: var(--main-font);
+  color: var(--desaturated-dark-cyan);
+  cursor: pointer;
 }
 
 .card img {
@@ -59,7 +98,7 @@ h1 {
   font-weight: 700;
 }
 
-span {
+.new, .featured {
   margin-left: .5em;
   color: var(--white);
   text-transform: uppercase;
@@ -93,7 +132,7 @@ span {
   flex-wrap: wrap;
 }
 
-.more-info p {
+.more-info p, .option {
   margin: .5em 1.5em .5em 0;
   background-color: var(--light-grayish-cyan--bg);
   color: var(--desaturated-dark-cyan);
@@ -106,10 +145,15 @@ span {
   header {
     background-image: url("/assets/img/bg-header-desktop.svg");
   }
+
   .card {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    width: 85vw;
+  }
+
+  .filter-container {
     width: 85vw;
   }
 
