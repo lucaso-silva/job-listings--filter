@@ -10,7 +10,7 @@
 
   --white: hsl(0, 100%, 98%);
   --light-grayish-cyan--bg: hsl(180, 61%, 92%);
-  --light-grayish-cyan: hsl(180, 31%, 95%);
+  --light-grayish-cyan: hsl(180, 45%, 98%);
   --dark-grayish-cyan: hsl(180, 8%, 52%);
   --very-dark-grayish-cyan: hsl(180, 14%, 20%);
 }
@@ -34,9 +34,9 @@ body {
 .card {
   width: 75vw;
   margin: 3em auto;
-  background-color: var(--white);
+  background-color: var(--light-grayish-cyan);
   padding: 1em 1.5em;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: .5px .5px 20px var(--desaturated-dark-cyan);
 }
 
@@ -100,4 +100,34 @@ span {
   font-weight: 700;
   padding: .5em .75em;
   border-radius: 5px;
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    background-image: url("/assets/img/bg-header-desktop.svg");
+  }
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 85vw;
+  }
+
+  .card img, .card>div {
+    position: inherit;
+  }
+
+  .card img {
+    width: 60px;
+    height: 60px;
+    margin-right: 2.5em;
+  }
+
+  .info {
+    border-bottom: none;
+  }
+
+  .more-info {
+    margin-left: 5em;
+  }
 }
