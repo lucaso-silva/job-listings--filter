@@ -2,7 +2,6 @@ const selectInput = document.querySelector("select");
 const filterItensArea = document.querySelector(".filter-options");
 
 export default function createFilterItem() {
-    console.log(selectInput.value)
     const newDiv = document.createElement("div");
     const newItemFilter = document.createElement("p");
     newItemFilter.classList.add("option")

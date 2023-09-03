@@ -1,14 +1,10 @@
 import createFilterItem from "./createFilterItem.js";
 
 const selectInput = document.querySelector("select");
-
-
-console.log(selectInput);
+const buttonClear = document.querySelector("button");
+const filterItensArea = document.querySelector(".filter-options");
 
 selectInput.addEventListener("change", createFilterItem);
-
-// allOptions.forEach(option => {
-//     option.addEventListener("selected", ()=> {
-//         console.log("hi!");
-//     });
-// })
+buttonClear.addEventListener("click", ()=>{
+    filterItensArea.textContent = "";
+});
