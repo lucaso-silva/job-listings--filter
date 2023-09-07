@@ -175,6 +175,10 @@ h1 {
   border-radius: 5px;
 }
 
+.role-featured {
+  border-left: 5px solid var(--desaturated-dark-cyan);
+}
+
 @media screen and (min-width: 1024px) {
   header {
     background-image: url("/assets/img/bg-header-desktop.svg");

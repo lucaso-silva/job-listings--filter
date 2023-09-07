@@ -3,17 +3,20 @@ const cardsContainer = document.querySelector(".cards-container");
 export default function createCard(item){
     let companyLogo = item.logo;
     let companyName = item.company;
+    let newRole = item.new;
+    let featuredRole = item.featured;
     let position = item.position;
     let postedAt = item.postedAt;
     let typeContract = item.contract;
     let jobLocation = item.location;
+    let role = item.role;
     let languages = item.languages;
     let level = item.level;
     let tools = item.tools;
 
-    console.log(`${companyName} - ${position} / posted ${postedAt}. 
-    Location: ${jobLocation} - ${typeContract}. 
-    Languages needed: ${languages}. Assets: ${tools}`)
+    // console.log(`${companyName} - ${position} / posted ${postedAt}. 
+    // Location: ${jobLocation} - ${typeContract}. 
+    // Languages needed: ${languages}. Assets: ${tools}`);
 
     let newCard = document.createElement("div");
     newCard.classList.add("card");
@@ -38,11 +41,22 @@ export default function createCard(item){
     
     let infoNew = document.createElement("span");
     infoNew.classList.add("new");
-    // infoNew.textContent = 
+    if(newRole == true) {
+        infoNew.textContent = "new";
+    } else {
+        infoNew.textContent = "";
+        infoNew.style.backgroundColor = "transparent";
+    }
 
     let infoFeatured = document.createElement("span");
     infoFeatured.classList.add("featured");
-    // infoFeatured.textContent = 
+    if(featuredRole == true) {
+        infoFeatured.textContent = "featured";
+        newCard.classList.add("role-featured");  
+    } else {
+        infoFeatured.textContent = "";
+        infoFeatured.style.backgroundColor = "transparent";
+    }
 
     let headingPosition = document.createElement("h2");
     headingPosition.textContent = position;
@@ -75,18 +89,31 @@ export default function createCard(item){
 
     newCard.appendChild(divMoreInfo);
 
-    let infoLanguage = document.createElement("p");
-    infoLanguage.innerText = languages;
+    let infoRole = document.createElement("p");
+    infoRole.innerText = role;  
+    divMoreInfo.appendChild(infoRole);
+
+    if(languages.length > 0) {
+        for(let i=0; i<languages.length; i++) {
+            let infoLanguage = document.createElement("p");
+            infoLanguage.innerText = languages[i];
+            divMoreInfo.appendChild(infoLanguage);
+        }
+    }
 
     let infoLevel = document.createElement("p");
     infoLevel.innerText = level;
-
-    let infoTools = document.createElement("p");
-    infoTools.innerText = tools;
-
-    divMoreInfo.appendChild(infoLanguage);
+    
     divMoreInfo.appendChild(infoLevel);
-    divMoreInfo.appendChild(infoTools);
+
+    if(tools.length > 0) {
+        for(let i=0; i<tools.length; i++) {
+            let infoTools = document.createElement("p");
+            infoTools.innerText = tools[i];
+            divMoreInfo.appendChild(infoTools);
+        }
+    }
+       
 
     cardsContainer.appendChild(newCard);
 }
