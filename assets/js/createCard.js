@@ -88,5 +88,5 @@ export default function createCard(item){
     divMoreInfo.appendChild(infoLevel);
     divMoreInfo.appendChild(infoTools);
 
-    cardsContainer.innerHTML += newCard;
+    cardsContainer.appendChild(newCard);
 }
