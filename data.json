@@ -57,7 +57,7 @@
     "contract": "Contract",
     "location": "USA Only",
     "languages": ["CSS", "JavaScript"],
-    "tools": []
+    "tools": ["Tailwind"]
   },
   {
     "id": 5,

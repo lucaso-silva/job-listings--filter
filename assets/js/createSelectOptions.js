@@ -43,8 +43,32 @@ export default function createSelectOption(data) {
         
     }
 
-    console.log(selectOptionRole)
-    console.log(selectOptionTools);
-    console.log(selectOptionLevel);
-    console.log(selectOptionLanguages);
+    for(let i=0; i<selectOptionRole.length; i++){
+        let optionRole = document.createElement("option");
+        optionRole.setAttribute("value", selectOptionRole[i]);
+        optionRole.textContent = selectOptionRole[i];
+        groupRole.appendChild(optionRole);
+    }
+
+    for(let i=0; i<selectOptionLevel.length; i++){
+        let optionLevel = document.createElement("option");
+        optionLevel.setAttribute("value", selectOptionLevel[i]);
+        optionLevel.textContent = selectOptionLevel[i];
+        groupLevel.appendChild(optionLevel);
+    }
+
+    for(let i=0; i<selectOptionTools.length; i++){
+        let optionTool = document.createElement("option");
+        optionTool.setAttribute("value", selectOptionTools[i]);
+        optionTool.textContent = selectOptionTools[i];
+        groupTools.appendChild(optionTool);
+    }
+
+    for(let i=0; i<selectOptionLanguages.length; i++){
+        let optionLanguage = document.createElement("option");
+        optionLanguage.setAttribute("value", selectOptionLanguages[i]);
+        optionLanguage.textContent = selectOptionLanguages[i];
+        groupLanguages.appendChild(optionLanguage);
+    }
+    console.log();
 }
