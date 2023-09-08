@@ -160,6 +160,11 @@ h1 {
   margin-right: .5em;
 }
 
+.contract::before, .location::before {
+  content: "⚬";
+  margin-right: .5em;
+}
+
 .more-info {
   display: flex;
   align-items: center;

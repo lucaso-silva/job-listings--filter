@@ -44,8 +44,7 @@ export default function createCard(item){
     if(newRole == true) {
         infoNew.textContent = "new";
     } else {
-        infoNew.textContent = "";
-        infoNew.style.backgroundColor = "transparent";
+        infoNew.style.display = "none";
     }
 
     let infoFeatured = document.createElement("span");
@@ -54,8 +53,7 @@ export default function createCard(item){
         infoFeatured.textContent = "featured";
         newCard.classList.add("role-featured");  
     } else {
-        infoFeatured.textContent = "";
-        infoFeatured.style.backgroundColor = "transparent";
+        infoFeatured.style.display = "none";
     }
 
     let headingPosition = document.createElement("h2");
@@ -75,9 +73,11 @@ export default function createCard(item){
     infoDayPosted.textContent = postedAt;
 
     let infoTypeContract = document.createElement("p");
+    infoTypeContract.classList.add("contract");
     infoTypeContract.textContent = typeContract;
 
     let infoLocation = document.createElement("p");
+    infoLocation.classList.add("location");
     infoLocation.innerText = jobLocation;
 
     divInfo.appendChild(infoDayPosted);
@@ -113,7 +113,5 @@ export default function createCard(item){
             divMoreInfo.appendChild(infoTools);
         }
     }
-       
-
     cardsContainer.appendChild(newCard);
 }
