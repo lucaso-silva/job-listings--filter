@@ -1,6 +1,7 @@
 import createFilterItem from "./createFilterItem.js";
 import createCard from "./createCard.js";
 import createSelectOption from "./createSelectOptions.js";
+import filterJobs from "./filterJobs.js";
 
 const selectInput = document.querySelector("select");
 const buttonClear = document.querySelector("button");
@@ -17,7 +18,11 @@ jsonData.then((response)=>{
     });
 })
 
-selectInput.addEventListener("change", createFilterItem);
+selectInput.addEventListener("change", ()=>{
+    createFilterItem();
+    filterJobs();
+});
+
 buttonClear.addEventListener("click", ()=>{
     filterItensArea.textContent = "";
 });

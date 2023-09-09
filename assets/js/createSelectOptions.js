@@ -4,14 +4,12 @@ let selectOptionLanguages = [];
 let selectOptionTools = [];
 
 export default function createSelectOption(data) {
-    //console.log(data);
     let groupRole = document.querySelector(".group-role");
     let groupLevel = document.querySelector(".group-level");
     let groupLanguages = document.querySelector(".group-language");
     let groupTools = document.querySelector(".group-tools");
 
     for(let i=0; i<data.length; i++) {
-        // console.log(data[i]);
         let role = data[i].role;
         let level = data[i].level;
         let languages = data[i].languages;
@@ -70,5 +68,4 @@ export default function createSelectOption(data) {
         optionLanguage.textContent = selectOptionLanguages[i];
         groupLanguages.appendChild(optionLanguage);
     }
-    console.log();
 }

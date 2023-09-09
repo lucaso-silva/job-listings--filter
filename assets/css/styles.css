@@ -88,7 +88,7 @@ button:hover {
 }
 
 button:active {
-  color: var(--dark-grayish-cyan);
+  color: var(--very-dark-grayish-cyan);
 }
 
 .card, .filter-container {
