@@ -4,7 +4,7 @@ import createSelectOption from "./createSelectOptions.js";
 import filterJobs from "./filterJobs.js";
 
 const selectInput = document.querySelector("select");
-const buttonClear = document.querySelector("button");
+const buttonFilter = document.querySelector("button");
 const filterItensArea = document.querySelector(".filter-options");
 
 const jsonData = fetch("data.json");
@@ -20,9 +20,9 @@ jsonData.then((response)=>{
 
 selectInput.addEventListener("change", ()=>{
     createFilterItem();
-    filterJobs();
 });
 
-buttonClear.addEventListener("click", ()=>{
+buttonFilter.addEventListener("click", ()=>{
+    filterJobs();
     filterItensArea.textContent = "";
 });
