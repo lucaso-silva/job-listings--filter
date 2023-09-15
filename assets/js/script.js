@@ -24,5 +24,5 @@ selectInput.addEventListener("change", ()=>{
 
 buttonFilter.addEventListener("click", ()=>{
     filterJobs();
-    filterItensArea.textContent = "";
+    //filterItensArea.textContent = "";
 });

@@ -3,7 +3,7 @@
 
 export default function filterJobs() {
   let filtersSelected = document.querySelectorAll(".option");
-  console.log(filtersSelected[0].classList[0]);
+  console.log(filtersSelected);
 
   // let newCard = {
   //   role: groupRole,
