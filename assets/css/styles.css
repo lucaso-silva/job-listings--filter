@@ -161,7 +161,7 @@ h1 {
 }
 
 .contract::before, .location::before {
-  content: "⚬";
+  content: "●";
   margin-right: .5em;
 }
 
